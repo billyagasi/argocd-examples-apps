@@ -6,6 +6,10 @@ metadata:
   labels:
     app: my-app
 spec:
+  source:
+    path: apps/templates/testapp/
+    repoURL: https://github.com/arthurk/argocd-example-install.git
+    targetRevision: HEAD
   replicas: 4
   strategy:
     canary:
