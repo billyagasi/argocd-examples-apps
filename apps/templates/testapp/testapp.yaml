@@ -6,7 +6,7 @@ metadata:
   labels:
     app: my-app
 spec:
-  replicas: 4
+  replicas: 10
   strategy:
     canary:
       steps:
@@ -18,7 +18,7 @@ spec:
       - pause: {duration: 10}
       - setWeight: 80
       - pause: {}
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: my-app
